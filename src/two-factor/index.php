@@ -10,7 +10,7 @@ require_once '../../vendor/autoload.php';
 session_start();
 
 $ga = new PHPGangsta_GoogleAuthenticator();
-$secret = $ga->createSecret();
+$secret = "RQVKNRCZ6N7PCEYV";
 
 $qrCodeUrl = $ga->getQRCodeGoogleUrl('Seminar authenticatie', $secret);
 

@@ -16,10 +16,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $checkResult = $ga->verifyCode($secret, $inputCode, 2);
 
     if($inputName != $accountName || $inputPassword != $accountPassword) {
-        echo 'Onjuiste combinatie gebruikersnaam en wachtwoord';
+        echo '<h2>Onjuiste combinatie gebruikersnaam en wachtwoord</h2>';
     } else if(!$checkResult) {
-        echo 'Onjuiste beveiligingscode';
+        echo '<h2>Onjuiste beveiligingscode</h2>';
     } else {
-        echo 'Succesvol ingelogd!';
+        echo '<h2>Succesvol ingelogd!</h2>';
     }
 }
